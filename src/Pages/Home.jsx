@@ -27,55 +27,40 @@ function Home() {
 
   return (
     <div>
-      <div className="flex mb-20">
-        <div className="flex-1">
-          <h1 className="text-7xl ml-10 mr-56 mb-4 font-bold">
+      <div className=" container flex mb-20">
+        <div className=" mt-5 flex-1">
+          <h1 className="text-7xl text-gray-600 mb-4 font-bold">
             We are changing <br /> the way people <br /> shop
           </h1>
-          <p className="ml-10 text-2xl">
+          <p className=" text-2xl text-gray-600 mt-10 ">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />
             Tempore repellat explicabo enim soluta temporibus asperiores <br />
             aut obcaecati perferendis porro nobis.
           </p>
-          <button onClick={handleProducts} className="ml-10 bg-blue-500 p-3 rounded-md text-white mt-4">
+          <button onClick={handleProducts} className=" bg-blue-500 p-3 mt-10 rounded-md text-white mt-4">
             OUR PRODUCTS
           </button>
         </div>
-        <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
-  <div className="carousel-item">
+        <div className="carousel carousel-center bg-neutral rounded-box max-w-md w-[600px] space-x-4 p-4">
+  <div className="carousel-item">  
     <img
-      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-      className="rounded-box" />
+      src="https://react-vite-comfy-store-v2.netlify.app/assets/hero1-deae5a1f.webp"
+      className="rounded-box w-[300px] h-[470px]" />
   </div>
   <div className="carousel-item">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      className="rounded-box" />
+      src="https://react-vite-comfy-store-v2.netlify.app/assets/hero2-2271e3ad.webp"
+      className="rounded-box w-[300px] h-[470px]" />
   </div>
   <div className="carousel-item">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      className="rounded-box" />
+      src="https://react-vite-comfy-store-v2.netlify.app/assets/hero3-a83f0357.webp"
+      className="rounded-box w-[300px] h-[470px]" />
   </div>
   <div className="carousel-item">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      className="rounded-box" />
-  </div>
-  <div className="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-      className="rounded-box" />
-  </div>
-  <div className="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-      className="rounded-box" />
-  </div>
-  <div className="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      className="rounded-box" />
+      src="https://react-vite-comfy-store-v2.netlify.app/assets/hero4-4b9de90e.webp"
+      className="rounded-box w-[300px] h-[470px]" />
   </div>
 </div>
       </div>
@@ -83,10 +68,10 @@ function Home() {
       <h1 className="text-4xl ml-10 mb-10">Featured Products</h1>
       <div className="wrapper container mx-auto flex flex-wrap gap-3 justify-center">
         {products.length > 0 && products.map((product) => (
-          <div key={product.id} className="w-1/4 shadow-md rounded-md cursor-pointer" onClick={() => handleRedirect(product.id)}>
-            <img className="h-[300px] w-full object-cover" src={product.attributes.image} alt={product.attributes.title} />
-            <h2 className="text-lg font-semibold mt-2">{product.attributes.title}</h2>
-            <h3 className="text-xl text-gray-600">${product.attributes.price}</h3>
+          <div key={product.id} className="w-[350px] h-[320px] bg-white shadow-md rounded-md cursor-pointer" onClick={() => handleRedirect(product.id)}>
+            <img className="h-[200px] w-[330px] rounded-md  ml-[10px] mt-[10px] object-cover" src={product.attributes.image} alt={product.attributes.title} />
+            <h2 className="text-lg text-slate-700 text-center mt-[28px] text-[20px]">{product.attributes.title}</h2>
+            <h3 className="text-xl  text-slate-700 text-center mt-[10px] text-[18px]">${product.attributes.price}</h3>
           </div>
         ))}
       </div>

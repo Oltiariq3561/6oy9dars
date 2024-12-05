@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import axios from 'axios';
 function MainLayout({ children }) {
   return (
-    <div className="bg-[#0a192f] p-4 text-white">
+    <div className= " container w-[1200px] mx-auto p-4 text-white">
       <header className="flex justify-between items-center mb-10">
         <div className="flex items-center space-x-4">
           <div className="bg-blue-500 p-4 px-5 rounded text-white font-bold">C</div>
