@@ -6,6 +6,7 @@ import Details from './Pages/Details';
 import ErrorPage from './Pages/ErrorPage';
 import Products from './Pages/Products';
 import MainLayout from './layouts/MainLayout';
+import CartPage from './Pages/Cart';
 
 function App() {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ function App() {
       <Route path="about" element={<MainLayout><About /></MainLayout>} />
       <Route path="/products/:id" element={<MainLayout><Details /></MainLayout>} />
       <Route path="/products" element={<MainLayout><Products /></MainLayout>} />
+      <Route path="/cart" element={<MainLayout><CartPage/></MainLayout>} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
